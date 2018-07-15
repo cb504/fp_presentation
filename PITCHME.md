@@ -137,7 +137,7 @@ static function getEventsBookableInNextHalfHour(this events: list[:event], datet
 
 ---
 
-# Review of all the rest 
+## Review of all the rest 
 
 * Higher order functions
 * Recursion
@@ -148,7 +148,7 @@ static function getEventsBookableInNextHalfHour(this events: list[:event], datet
 
 ---
 
-# Higher order functions
+## Higher order functions
 
 ```javascript
 let f = foo() {};
