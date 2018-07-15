@@ -226,7 +226,7 @@ let avg = numbers.reduce(0, (a, b) => a + b) / numbers.length;
 ---
 
 ## Composition
-[source](http://jsbin.com/gowugugaso/edit?js,output) 
+[JSBin source](http://jsbin.com/gowugugaso/edit?js,output), 
 [course](https://frontendmasters.com/courses/functional-javascript/composition-exercise-challenge-2-solution/)
 
 ```javascript
@@ -254,11 +254,10 @@ assertEqual(3, avg([1,2,3,4,5]));
 
 * Fluent API is often better (more maintainable)
 * But, when you can’t because the language doesn’t support fluent api?
-
-* Try and use .filter(), .map(), .reduce()   everyone will thank you later
-* Keep all your utility functions related to a specific type in one OBVIOUS place. 
-Your composed function are in the same file as the composite.
-* Make sure at least 1-2 other people understand your code. If it is too difficult, explicit composition is better/safer (if a bit ugly):
+	* Try and use .filter(), .map(), .reduce()   everyone will thank you later
+	* Keep all your utility functions related to a specific type in one OBVIOUS place. Your composed function are in the same file/directory as the composite.
+	* Make sure at least 1-2 other people understand your code. 
+	* Explicit composition can be safer (if a bit ugly):
 
 ```javascript
 let avg = divide(sum(numbers), numbers.length);
