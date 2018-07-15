@@ -6,7 +6,7 @@ Hezi Ben-Michael
 
 ---
 
-# Overview
+## Overview
 
 * Part 1: Pure functions
 	* what and why
@@ -22,7 +22,7 @@ Hezi Ben-Michael
 ---
 
 
-# FP is all about Pure Functions
+## FP is all about Pure Functions
 
 
 1. Is not affected by its environment. It is stateless
@@ -33,7 +33,7 @@ Hezi Ben-Michael
 
 ---
 
-# Walkthrough 
+## Walkthrough 
 
 ```javascript
 getEventsBookableInNextHalfHour(events);
@@ -46,7 +46,7 @@ function getEventsBookableInNextHalfHour(events) {
 
 ---
 
-# Walkthrough 
+## Walkthrough 
 
 ```javascript
 getEventsBookableInNextHalfHour(events);
@@ -59,7 +59,7 @@ function getEventsBookableInNextHalfHour(events) {
 
 ---
 
-# Walkthrough 
+## Walkthrough 
 
 ```javascript
 getEventsBookableInNextHalfHour(events, Date.now());
@@ -72,7 +72,7 @@ function getEventsBookableInNextHalfHour(events, datetime) {
 
 ---
 
-# Walkthrough 
+## Walkthrough 
 
 ```javascript
 let bookableEvents = getEventsBookableInNextHalfHour(events,
@@ -86,8 +86,9 @@ function getEventsBookableInNextHalfHour(events, datetime) {
 
 ---
 
-# Walkthrough – "Discover-ability Problem"
+## Walkthrough 
 
+### "Discover-ability Problem"
 
 ```javascript
 let bookableEvents = getEventsBookableInNextHalfHour(events);
@@ -100,8 +101,9 @@ function getEventsBookableInNextHalfHour(events, datetime) {
 
 ---
 
-# Walkthrough – "Discover-ability Problem"
+## Walkthrough 
 
+### "Discover-ability Problem"
 
 ```javascript
 let bookableEvents = events.getEventsBookableInNextHalfHour();
@@ -156,7 +158,8 @@ let f = foo() {};
 
 ---
 
-# Recursion
+## Recursion
+
 ```javascript
 let numbers = [1, 2, 3, 4];
 let sum = add(0, numbers);
@@ -170,7 +173,9 @@ function add(accumulator, numbers) {
 
 ---
 
-# Recursion, alternative is Loop
+## Recursion
+
+### Alternative is Loop
 
 ```javascript
 let numbers = [1, 2, 3, 4];
@@ -185,7 +190,7 @@ function add(numbers) {
 
 ---
 
-# Currying
+## Currying
 
 * Motive: allow function to have state
 * Mathematics Motive: function should have only 1 input parameter
@@ -204,7 +209,9 @@ let avg = divideByLength(add(0, numbers));
 
 ---
 
-# Currying, alterntives are OOP and fluent-api
+## Currying
+
+### alterntives are OOP and fluent-api
 
 ```javascript
 // base service - OOP
@@ -218,7 +225,7 @@ let avg = numbers.reduce(0, (a, b) => a + b) / numbers.length;
 
 ---
 
-# Composition
+## Composition
 
 ```javascript
 // -- Challenge 4 -------------------------
@@ -229,8 +236,6 @@ let avg = numbers.reduce(0, (a, b) => a + b) / numbers.length;
 var fork = _.curry(function(lastly, f, g, x) {
   return lastly(f(x), g(x));
 });
-
-
 
 // As you can see, the fork function is a
 // pipeline like compose, except it duplicates
@@ -243,7 +248,7 @@ assertEqual(3, avg([1,2,3,4,5]));
 
 ---
 
-# Composition
+## Composition
 
 * Fluent API is often better (more maintainable)
 * But, when you can’t because the language doesn’t support fluent api?
@@ -259,13 +264,13 @@ let avg = divide(sum(numbers), numbers.length);
 
 ---
 
-# Functors
+## Functors
 
 * Stuff that is mappable
 
 ---
 
-# Monads
+## Monads
 
 * Wrapping procedural code in function.
 
@@ -273,16 +278,16 @@ let avg = divide(sum(numbers), numbers.length);
 
 ---
 
-# Review of all the rest 
+## Review
 
-FP Idiom | Critique
----------|-----------
-Higher order functions | (ok)
-Recursion | "Loops are your friends"
-Currying | OOP
+FP Idiom    | Critique
+------------|-----------
+HOF         | (ok)
+Recursion   | "Loops are your friends"
+Currying    | OOP
 Composition | Fluent-API
-Functors | ????
-Monads | "Because procedural is a naughty word"
+Functors    | ????
+Monads      | "Because procedural is a naughty word"
 
 ---
 
@@ -294,4 +299,4 @@ Monads | "Because procedural is a naughty word"
 * Use .filter(), .map(), .reduce()
 * Discover-ability, Fluent API
 
-Have a great day
+## Have a great day
