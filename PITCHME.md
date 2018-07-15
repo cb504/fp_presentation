@@ -257,11 +257,6 @@ assertEqual(3, avg([1,2,3,4,5]));
 	* Try and use .filter(), .map(), .reduce()   everyone will thank you later
 	* Keep all your utility functions related to a specific type in one OBVIOUS place. Your composed function are in the same file/directory as the composite.
 	* Make sure at least 1-2 other people understand your code. 
-	* Explicit composition can be safer (if a bit ugly):
-
-```javascript
-let avg = divide(sum(numbers), numbers.length);
-```
 
 ---
 
