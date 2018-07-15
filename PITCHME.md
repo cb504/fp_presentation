@@ -1,6 +1,6 @@
 # Functional Programming: 
 
-##The good, the bad, and the ugly.
+## The good, the bad, and the ugly.
 
 Hezi Ben-Michael
 
@@ -22,14 +22,15 @@ Hezi Ben-Michael
 ---
 
 
-# FP at its core is all about Pure Functions
+# FP is all about Pure Functions
 
 A Pure Function is a function that:
 
 1. Is not affected by its environment. It is stateless
+
 2.  Does not have side affects
 
-Why is this good?
+* Why is this good?
 
 ---
 
@@ -86,7 +87,8 @@ function getEventsBookableInNextHalfHour(events, datetime) {
 
 ---
 
-# Walkthrough – “Discover-ability Problem”
+# Walkthrough – "Discover-ability Problem"
+
 
 ```javascript
 let bookableEvents = getEventsBookableInNextHalfHour(events);
@@ -99,7 +101,8 @@ function getEventsBookableInNextHalfHour(events, datetime) {
 
 ---
 
-# Walkthrough – “Discover-ability Problem”
+# Walkthrough – "Discover-ability Problem"
+
 
 ```javascript
 let bookableEvents = events.getEventsBookableInNextHalfHour();
@@ -116,7 +119,7 @@ static function getEventsBookableInNextHalfHour(this events: list[:event], datet
 # Part 1: highlights
 
 * Pure Functions are pure logic/algorithm
-* The “safe” place in your code
+* The "safe" place in your code
 * OOP + Fluent API/Interface
 * Use JS .filter(), .map(), .reduce()
 
@@ -190,7 +193,7 @@ function add(numbers) {
 
 ```javascript
 // base service
-let lcsClient = httpClient(“lcs”); 
+let lcsClient = httpClient("lcs"); 
 
 // average
 let numbers = [1, 2, 3, 4];
@@ -206,7 +209,7 @@ let avg = divideByLength(add(0, numbers));
 
 ```javascript
 // base service - OOP
-let lcsClient = new HttpClient(“lcs”); 
+let lcsClient = new HttpClient("lcs"); 
 
 // average – fluent API
 let avg = numbers.sum().divideBy(numbers.length);
