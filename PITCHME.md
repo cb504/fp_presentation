@@ -226,9 +226,11 @@ let avg = numbers.reduce(0, (a, b) => a + b) / numbers.length;
 ---
 
 ## Composition
+[source](http://jsbin.com/gowugugaso/edit?js,output) 
+[course](https://frontendmasters.com/courses/functional-javascript/composition-exercise-challenge-2-solution/)
 
 ```javascript
-// -- Challenge 4 -------------------------
+// -- Challenge 4 ----------------------
 // Your challenge: implement a function to
 // compute the average values in a list using
 // only fork, _.divide, _.sum, and _.size.
@@ -298,5 +300,15 @@ Monads      | "Because procedural is a naughty word"
 * FP creates safe places in your code, code that is very testable
 * Use .filter(), .map(), .reduce()
 * Discover-ability, Fluent API
+
+---
+
+# Resources
+
+* [Hardcore Functional Programming in JavaScript](https://frontendmasters.com/courses/functional-javascript/)
+	* Also available on pluralsight
+* [Fun fun function (JS) - youtube](https://youtu.be/BMUiFMZr7vk)
+
+---
 
 ## Have a great day
