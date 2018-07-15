@@ -24,7 +24,6 @@ Hezi Ben-Michael
 
 # FP is all about Pure Functions
 
-A Pure Function is a function that:
 
 1. Is not affected by its environment. It is stateless
 
@@ -112,7 +111,7 @@ bookEvents(bookableEvents);
 static function getEventsBookableInNextHalfHour(this events: list[:event], datetime) {
     // code
 }
-```javascript
+```
 
 ---
 
@@ -131,7 +130,7 @@ static function getEventsBookableInNextHalfHour(this events: list[:event], datet
 
 * Procedural: C
 * OO: Java(~), Smalltalk
-* FP: Haskell, Scala, Erlang
+* __FP: Haskell, Scala, Erlang__
 * Multi-paradigm: Javascript, C++, C#
 
 ---
@@ -276,18 +275,14 @@ let avg = divide(sum(numbers), numbers.length);
 
 # Review of all the rest 
 
-* Higher order functions
-	* (ok)
-* Recursion
-	* "Loops are your friends"
-* Currying
-	* OOP
-* Composition
-	* Fluent-API
-* Functors
-	* ????
-* Monads
-	* "Because procedural is a naughty word"
+FP Idiom | Critique
+---------|-----------
+Higher order functions | (ok)
+Recursion | "Loops are your friends"
+Currying | OOP
+Composition | Fluent-API
+Functors | ????
+Monads | "Because procedural is a naughty word"
 
 ---
 
@@ -299,5 +294,4 @@ let avg = divide(sum(numbers), numbers.length);
 * Use .filter(), .map(), .reduce()
 * Discover-ability, Fluent API
 
-
-Thank you
+Have a great day
