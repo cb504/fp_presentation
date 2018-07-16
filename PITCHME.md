@@ -57,6 +57,8 @@ function getEventsBookableInNextHalfHour(events) {
 }
 ```
 
+* The function is affected by the environment or state of the machine's clock. 
+
 ---
 
 ## Walkthrough 
@@ -69,6 +71,9 @@ function getEventsBookableInNextHalfHour(events, datetime) {
     // code
 }
 ```
+
+* No hidden values `Date.now()`.
+* This function is easily testable.
 
 ---
 
@@ -84,11 +89,16 @@ function getEventsBookableInNextHalfHour(events, datetime) {
 }
 ```
 
+* No side-effects. The function was changing the input by removing elements from the array.
+* Calling a service inside the function is forbidden, do that outside `getEventsBookableInNextHalfHour`
+
 ---
 
 ## Walkthrough 
 
 ### "Discover-ability Problem"
+
+* How do I know this function exits? Auto-completion won't help me.
 
 ```javascript
 let bookableEvents = getEventsBookableInNextHalfHour(events);
@@ -98,6 +108,8 @@ function getEventsBookableInNextHalfHour(events, datetime) {
     // code
 }
 ```
+
+* I recommend creating directory 'entities' and creating a file for every entity, e.g. `events.js`.
 
 ---
 
@@ -110,10 +122,14 @@ let bookableEvents = events.getEventsBookableInNextHalfHour();
 bookEvents(bookableEvents);
 //events.getEventsBookableInNextHalfHour().bookEvents();
 
-static function getEventsBookableInNextHalfHour(this events: list[:event], datetime) {
+static function getEventsBookableInNextHalfHour(
+					this events: list[:event], 
+					datetime) {
     // code
 }
 ```
+
+* Extension methods are great but don't exist in Javascript or Typescript. :(
 
 ---
 
