@@ -138,7 +138,7 @@ static function getEventsBookableInNextHalfHour(
 * Pure Functions are pure logic/algorithm
 * The "safe" place in your code
 * OOP + Fluent API/Interface
-* Use JS .filter(), .map(), .reduce()
+* Use JS `.filter(), .map(), .reduce()`
 
 ---
 
@@ -268,23 +268,37 @@ assertEqual(3, avg([1,2,3,4,5]));
 
 ## Composition
 
+This is at the core of FP ... and is it source of pain
+
+* Composition leads programmers to break problems into small pieces each solved by a function, and then composed to solve a big/real problem.
+* But now you have to know all these functions to solve a problem and you don't have auto-completion to help you find them :(
+	* It is great if a small codebase maintained by 1 programmer. If that programmer leaves, your screwed.
 * Fluent API is often better (more maintainable)
-* But, when you can’t because the language doesn’t support fluent api?
-	* Try and use .filter(), .map(), .reduce()   everyone will thank you later
-	* Keep all your utility functions related to a specific type in one OBVIOUS place. Your composed function are in the same file/directory as the composite.
-	* Make sure at least 1-2 other people understand your code. 
+
+---
+
+## ... more on Composition
+
+But, when you can’t because the language doesn’t support fluent api?
+* Try and use `.filter(), .map(), .reduce()` everyone will thank you later
+* Keep all your FP _utility_ functions related to a specific type in one OBVIOUS place. 
+	* Your composite function should be in the same file/directory as the composed functions.
+* Make sure at least 1-2 other people understand your code. FP should not be about job security.
 
 ---
 
 ## Functors
 
-* Stuff that is mappable
-
+* Objects that implement `.map()`, 
+	* containers for any object, e.g.: array, stream, __promise__, tree.
+	* and `.map(fn)` uses the callback to transform the elements.
+* Use `.map()`, it's will make your code great.
+	
 ---
 
 ## Monads
 
-* Wrapping procedural code in function.
+* Wrapping procedural code in a function.
 
 * In JS, rely multi-paradigm
 
@@ -297,8 +311,8 @@ FP Idiom    | Critique
 HOF         | (ok)
 Recursion   | "Loops are your friends"
 Currying    | OOP
-Composition | Fluent-API
-Functors    | ????
+Composition | Be careful, Fluent-API is better.
+Functors    | Builtin greatness!
 Monads      | "Because procedural is a naughty word"
 
 ---
@@ -308,7 +322,7 @@ Monads      | "Because procedural is a naughty word"
 * Procedural -> FP -> FP -> Procedural
 * Leverage multi-paradigm (OOP, procedural) 
 * FP creates safe places in your code, code that is very testable
-* Use .filter(), .map(), .reduce()
+* Use `.filter(), .map(), .reduce()`
 * Discover-ability, Fluent API
 
 ---
@@ -317,7 +331,7 @@ Monads      | "Because procedural is a naughty word"
 
 * [Hardcore Functional Programming in JavaScript](https://frontendmasters.com/courses/functional-javascript/)
 	* Also available on pluralsight
-* [Fun fun function (JS) - youtube](https://youtu.be/BMUiFMZr7vk)
+* [Fun fun function (JS) - youtube](https://www.youtube.com/watch?v=BMUiFMZr7vk&index=1&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84)
 
 ---
 
