@@ -208,8 +208,10 @@ function add(numbers) {
 
 ## Currying
 
-* Motive: allow function to have state
-* Mathematics Motive: function should have only 1 input parameter
+A function that returns another function.
+
+* Allow function to have state
+* A function should have only 1 input parameter
 
 ```javascript
 // base service
@@ -268,29 +270,28 @@ assertEqual(3, avg([1,2,3,4,5]));
 
 ## Composition
 
-This is at the core of FP ... and is it source of pain
+This is at the core of FP ... and is it's source of pain
 
 * Composition leads programmers to break problems into small pieces each solved by a function, and then composed to solve a big/real problem.
-* But now you have to know all these functions to solve a problem and you don't have auto-completion to help you find them :(
-	* It is great if a small codebase maintained by 1 programmer. If that programmer leaves, your screwed.
-* Fluent API is often better (more maintainable)
-
+* Keep functions separate from data/state. 
+	* OOP says this leads to unmaintainable code. (so do your managers)
+	
 ---
 
-## ... more on Composition
+## Composition - the Discover-ability problem
 
-But, when you can’t because the language doesn’t support fluent api?
-* Try and use `.filter(), .map(), .reduce()` everyone will thank you later
+* You need to know the codebase to compose
+	* ... and you don't have auto-completion to help you find functions :(
 * Keep all your FP _utility_ functions related to a specific type in one OBVIOUS place. 
 	* Your composite function should be in the same file/directory as the composed functions.
-* Make sure at least 1-2 other people understand your code. FP should not be about job security.
+* __Try and use `.filter(), .map(), .reduce()` everyone will thank you later__
 
 ---
 
 ## Functors
 
 * Objects that implement `.map()`, 
-	* containers for any object, e.g.: array, stream, __promise__, tree.
+	* containers for any object, e.g.: array, stream, promise, tree.
 	* and `.map(fn)` uses the callback to transform the elements.
 * Use `.map()`, it's will make your code great.
 	
@@ -298,9 +299,9 @@ But, when you can’t because the language doesn’t support fluent api?
 
 ## Monads
 
-* Wrapping procedural code in a function.
-
-* In JS, rely multi-paradigm
+* This is how functional programming languages handle IO.
+* In general, they implement `.flatMap()`, `.bind()`, `.chain()`
+	* The methods flatten layers of streams (stream+promise) to just get the value
 
 ---
 
@@ -317,13 +318,25 @@ Monads      | "Because procedural is a naughty word"
 
 ---
 
-# Final Thoughts
+# Final Thoughts part 1
 
+## FP takes a different view on the source of bugs 
+
+* Bugs are attracted to state
+* Stateless is good (e.g. React) 
+* Keep state in as few places as possible in your code
 * Procedural -> FP -> FP -> Procedural
-* Leverage multi-paradigm (OOP, procedural) 
+
+---
+
+# Final Thoughts part 2
+
+##  Why use FP?
+
 * FP creates safe places in your code, code that is very testable
 * Use `.filter(), .map(), .reduce()`
 * Discover-ability, Fluent API
+* Leverage multi-paradigm (OOP, procedural) 
 
 ---
 
