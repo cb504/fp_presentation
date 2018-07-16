@@ -318,18 +318,17 @@ Monads      | "Because procedural is a naughty word"
 
 ---
 
-# Final Thoughts part 1
+# Final Thoughts
+
+---
 
 ## FP takes a different view on the source of bugs 
 
-* Bugs are attracted to state
-* Stateless is good (e.g. React) 
+* Bugs are attracted to state: stateless is good (e.g. React) 
 * Keep state in as few places as possible in your code
 * Procedural -> FP -> FP -> Procedural
 
 ---
-
-# Final Thoughts part 2
 
 ##  Why use FP?
 
